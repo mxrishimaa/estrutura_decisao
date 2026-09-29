@@ -48,12 +48,37 @@ function valoresIguais() {
 function valorPositivoNegativo() {
     let num = Number(prompt("Digite um número"));
     if (num < 0) {
-        result = Number(num * 3);
+        let result = Number(num * 3);
         alert(result)
     } else if (num > 0) {
-        result = Number(num * 2);
+        let result = Number(num * 2);
         alert(result)
     } else {
         alert("Inválido")
     }
 } 
+
+function valorBooleano() {
+    let value_one = String(prompt("O valor um é verdadeiro?: ")).toLowerCase();
+    let value_two = String(prompt("O valor dois é verdadeiro?: ")).toLowerCase();
+    if (value_one === "sim"){
+        value_one = Boolean(true)
+    } else {
+        value_one = Boolean(false)
+    }
+    if (value_two === "sim"){
+        value_two = Boolean(true)
+    } else {
+        value_two = Boolean(false)
+    }
+
+    if (value_one && value_two === true){
+        alert("Ambos são verdadeiros")
+    } else if (value_one || value_two === true) {
+        alert("Nem todos são verdadeiros")
+    } else if (value_one && value_two === false) {
+        alert("Ambos são falsos")
+    } else {
+        alert("Operação Inválida")
+    }
+}
